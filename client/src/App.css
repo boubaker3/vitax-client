@@ -1,0 +1,9 @@
+ /* In your CSS file */
+.item {
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  
+  .item:hover {
+    transform: scale(1.1); /* Scale up the item on hover */
+  }
+  
