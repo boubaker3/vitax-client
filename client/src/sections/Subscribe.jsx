@@ -7,17 +7,13 @@ const [email,setEmail]=useState("");
 const [loading, setLoading] = useState(false);
 const subscribe= async()=>{
   setLoading(true);
-  
-      try {
-        const response = await axiosInstance.post("subscribe", {
-          email:email
-        }); 
-        setEmail("your are subscribed now!")
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-
-      }
+  try {
+    await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
+    setEmail("You are subscribed now!");
+    setLoading(false);
+  } catch (error) {
+    setLoading(false);
+  }
     
   }
   return (

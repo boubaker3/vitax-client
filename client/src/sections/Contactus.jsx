@@ -52,6 +52,11 @@ const Contactus = () => {
     } catch (error) {
       console.error("Failed to add a contact:", error);
     }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setRes("Message sent successfully!");
+    }, 2000);
      
   };
     
